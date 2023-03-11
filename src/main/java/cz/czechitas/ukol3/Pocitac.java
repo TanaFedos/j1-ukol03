@@ -60,25 +60,26 @@ public class Pocitac {
     }
 
     public void vypniSe() {
-        jeZapnuty = false;
-        System.out.println("Pocitac je vypnuty.");
+        if (jeZapnuty()) {
+            jeZapnuty = false;
+            System.out.println("Pocitac je vypnuty.");
+        }
     }
 
-    public void vytvorSouborOVelikosti(long velikost){
+    public void vytvorSouborOVelikosti(long velikost) {
         jeZapnuty = true;
         if (velikost > (pevnyDisk.kapacita - pevnyDisk.vyuziteMisto)) {
             System.err.println("Neni misto.");
-        }
-        else {
+        } else {
             System.out.println("Soubor se zmenil.");
         }
     }
-    public void vymazSouboryOVelikosti(long velikost){
+
+    public void vymazSouboryOVelikosti(long velikost) {
         jeZapnuty = true;
         if ((pevnyDisk.vyuziteMisto - velikost) >= 0) {
             System.out.println("Soubor je vymazan.");
-        }
-        else {
+        } else {
             System.err.println("Nemuzeme smazat soubor.");
         }
     }
