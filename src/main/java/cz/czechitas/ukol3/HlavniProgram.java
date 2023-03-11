@@ -1,5 +1,6 @@
 package cz.czechitas.ukol3;
 
+
 /**
  * Spouštěcí třída celého programu
  */
@@ -34,5 +35,8 @@ public class HlavniProgram {
 
         tanaPocitac.vypniSe();      // Nevypise chybu, ale nic neprovede,
         tanaPocitac.vypniSe();      // protoze pocitac je uz vypnuty
+
+        tanaPocitac.vytvorSouborOVelikosti(200_000_000_545L);
+        tanaPocitac.vymazSouboryOVelikosti(300_393_223_242L);
     }
 }

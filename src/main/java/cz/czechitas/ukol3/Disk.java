@@ -4,8 +4,8 @@ import java.util.Objects;
 
     public class Disk {
 
-        private long kapacita;
-        private long vyuziteMisto;
+        public long kapacita;
+        public long vyuziteMisto;
 
         public long getKapacita() {
             return kapacita;

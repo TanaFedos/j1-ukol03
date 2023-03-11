@@ -1,5 +1,7 @@
 package cz.czechitas.ukol3;
 
+import cz.czechitas.ukol3.Disk;
+
 import java.util.Objects;
 
 public class Pocitac {
@@ -60,6 +62,25 @@ public class Pocitac {
     public void vypniSe() {
         jeZapnuty = false;
         System.out.println("Pocitac je vypnuty.");
+    }
+
+    public void vytvorSouborOVelikosti(long velikost){
+        jeZapnuty = true;
+        if (velikost > (pevnyDisk.kapacita - pevnyDisk.vyuziteMisto)) {
+            System.err.println("Neni misto.");
+        }
+        else {
+            System.out.println("Soubor se zmenil.");
+        }
+    }
+    public void vymazSouboryOVelikosti(long velikost){
+        jeZapnuty = true;
+        if ((pevnyDisk.vyuziteMisto - velikost) >= 0) {
+            System.out.println("Soubor je vymazan.");
+        }
+        else {
+            System.err.println("Nemuzeme smazat soubor.");
+        }
     }
 }
 
