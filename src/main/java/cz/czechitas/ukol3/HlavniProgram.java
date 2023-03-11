@@ -6,8 +6,33 @@ package cz.czechitas.ukol3;
 public class HlavniProgram {
 
     public static void main(String... args) {
-        //TODO tady bude váš kód - vytvoření instance třídy Pocitac, zapnutí, vpynutí, výpis hodnot.
-        System.out.println("Program spuštěn.");
-    }
+        Pocitac tanaPocitac = new Pocitac();
+        System.out.println(tanaPocitac); // Vypise, ze soucasti jsou null
+        tanaPocitac.zapniSe();      // Vypise chybu, nema povinne soucasti
 
+        Procesor tanaProcesor = new Procesor();
+        tanaProcesor.setRychlost(2_200_000_000_000L);
+        tanaProcesor.setVyrobce("Intel");
+
+        Pamet tanaPamet = new Pamet();
+        tanaPamet.setKapacita(8_589_934_592L);
+
+        Disk tanaDisk = new Disk();
+        tanaDisk.setKapacita(485_015_932_928L);
+        tanaDisk.setVyuziteMisto(212_495_249_408L);
+
+        tanaPocitac.setCpu(tanaProcesor);
+        tanaPocitac.setRam(tanaPamet);
+        tanaPocitac.setPevnyDisk(tanaDisk);
+
+        System.out.println(tanaPocitac); // Vypise vse
+
+        tanaPocitac.zapniSe();      // Vypise, ze pocitac je zapnuty
+        tanaPocitac.zapniSe();      // Vypise chybu, protoze pocitac uz bezi
+
+        tanaPocitac.vypniSe();      // Vypise, ze pocitac je vypnuty
+
+        tanaPocitac.vypniSe();      // Nevypise chybu, ale nic neprovede,
+        tanaPocitac.vypniSe();      // protoze pocitac je uz vypnuty
+    }
 }
