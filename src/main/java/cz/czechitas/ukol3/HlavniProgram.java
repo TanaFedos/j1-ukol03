@@ -22,9 +22,14 @@ public class HlavniProgram {
         tanaDisk.setKapacita(485_015_932_928L);
         tanaDisk.setVyuziteMisto(212_495_249_408L);
 
+        DalsiDisk tanaNextDisk = new DalsiDisk();
+        tanaNextDisk.setKapacita(485_015_932_928L);
+        tanaNextDisk.setVyuziteMisto(310_345_129_506L);
+
         tanaPocitac.setCpu(tanaProcesor);
         tanaPocitac.setRam(tanaPamet);
         tanaPocitac.setPevnyDisk(tanaDisk);
+        tanaPocitac.setDruhyDisk(tanaNextDisk);
 
         System.out.println(tanaPocitac); // Vypise vse
 
@@ -36,7 +41,7 @@ public class HlavniProgram {
         tanaPocitac.vypniSe();      // Nevypise chybu, ale nic neprovede,
         tanaPocitac.vypniSe();      // protoze pocitac je uz vypnuty
 
-        tanaPocitac.vytvorSouborOVelikosti(200_000_000_545L);
-        tanaPocitac.vymazSouboryOVelikosti(300_393_223_242L);
+        tanaPocitac.vytvorSouborOVelikosti(120_000_000_545L);
+        tanaPocitac.vymazSouboryOVelikosti(250_393_223_242L);
     }
 }

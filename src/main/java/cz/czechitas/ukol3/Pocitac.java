@@ -10,6 +10,15 @@ public class Pocitac {
     private Procesor cpu;
     private Pamet ram;
     private Disk pevnyDisk;
+    private DalsiDisk druhyDisk;
+
+    public DalsiDisk getDruhyDisk() {
+        return druhyDisk;
+    }
+
+    public void setDruhyDisk(DalsiDisk druhyDisk) {
+        this.druhyDisk = druhyDisk;
+    }
 
     public Procesor getCpu() {
         return cpu;
@@ -69,20 +78,45 @@ public class Pocitac {
     public void vytvorSouborOVelikosti(long velikost) {
         jeZapnuty = true;
         if (velikost > (pevnyDisk.kapacita - pevnyDisk.vyuziteMisto)) {
+            System.out.println("Zkus dalsi disk.");
+        }
+        if (velikost > (druhyDisk.kapacita - druhyDisk.vyuziteMisto)) {
             System.err.println("Neni misto.");
         } else {
-            System.out.println("Soubor se zmenil.");
+            System.out.println("Soubor vesel.");
         }
     }
 
     public void vymazSouboryOVelikosti(long velikost) {
         jeZapnuty = true;
-        if ((pevnyDisk.vyuziteMisto - velikost) >= 0) {
-            System.out.println("Soubor je vymazan.");
-        } else {
+        if ((pevnyDisk.vyuziteMisto - velikost) < 0) {
+            System.out.println("Zkus dalsi disk.");
+        }
+        if ((druhyDisk.vyuziteMisto - velikost) < 0) {
             System.err.println("Nemuzeme smazat soubor.");
+        } else {
+            System.out.println("Soubor je vymazan.");
         }
     }
+
+
+//    public void vytvorSouborOVelikosti(long velikost) {
+//        jeZapnuty = true;
+//        if (velikost > (pevnyDisk.kapacita - pevnyDisk.vyuziteMisto)) {
+//            System.err.println("Neni misto.");
+//        } else {
+//            System.out.println("Soubor se zmenil.");
+//        }
+//    }
+//
+//    public void vymazSouboryOVelikosti(long velikost) {
+//        jeZapnuty = true;
+//        if ((pevnyDisk.vyuziteMisto - velikost) >= 0) {
+//            System.out.println("Soubor je vymazan.");
+//        } else {
+//            System.err.println("Nemuzeme smazat soubor.");
+//        }
+//    }
 }
 
 
