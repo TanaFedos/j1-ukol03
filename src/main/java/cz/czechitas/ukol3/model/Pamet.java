@@ -1,6 +1,4 @@
-package cz.czechitas.ukol3;
-
-import java.util.Objects;
+package cz.czechitas.ukol3.model;
 
 public class Pamet {
 
@@ -16,8 +14,6 @@ public class Pamet {
 
     @Override
     public String toString() {
-        return "Pamet{" +
-                "kapacita=" + kapacita +
-                '}';
+        return "Pamet: " + "kapacita " + kapacita + ";";
     }
 }

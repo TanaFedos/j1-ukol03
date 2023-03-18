@@ -4,7 +4,7 @@ Každou část úkolu vytvořte jako samostatný commit (důležité je to spí�
 po částech vyvářet dodatečně). Pokud zjistíte dodatečně v kódu nějakou chybu, nevadí, commitněte opravu jako další commit. Pokud si chcete práci průběžně
 zálohovat, po commitu udělejte také push, čímž se všechny neodeslané commity nahrají na GitHub.
 
-Úkolem bude pomocí tříd vytvořit v Javě jednoduchý model počítače, vypsat o něm nějaké informace a vyzkoušet zapnutí a vypnutí počítače. 
+Úkolem bude pomocí tříd vytvořit v Javě jednoduchý cz.czechitas.ukol3.model počítače, vypsat o něm nějaké informace a vyzkoušet zapnutí a vypnutí počítače. 
 
 💡 Poznámka: Při výpisu do konzole (terminálu) se ve skutečnosti rozlišují dva druhý výstupů – standardní výstup (běžné hlášky programu) a chybový výstup (chyby).
 V některých prostředích je chybový výstup odlišen – např. v konzoli IntelliJ Idea je chybový výstup zobrazen červeně.
@@ -23,7 +23,7 @@ celého příkazu:
 * `serr` → `System.err.println(|);`
 
 ## Část 1
-Vytvořte veřejné třídy `Disk`, `Pamet`, `Procesor`, `Pocitac` v balíčku `cz.czechitas.ukol3.model`. Třídy budou mít následující vlastnosti:
+Vytvořte veřejné třídy `Disk`, `Pamet`, `Procesor`, `Pocitac` v balíčku `cz.czechitas.ukol3.cz.czechitas.ukol3.model`. Třídy budou mít následující vlastnosti:
 
 ###  Disk
 * `long` kapacita (v bajtech)
@@ -61,7 +61,7 @@ Aby bylo možné počítač zapnout, musí mít procesor, paměť a disk. Při p
 Pokud nějaké chybí (např. `ram == null`), metoda pro zapnutí vypíše do konzle chybovou hlášku a metoda se ukončí (počítač se nezapne).
 
 
-V metodě `main(String... args)` v `HlavniProgram` vytvořte model **svého** počítače a vyzkoušejte, že vám fungují správně metody
+V metodě `main(String... args)` v `HlavniProgram` vytvořte cz.czechitas.ukol3.model **svého** počítače a vyzkoušejte, že vám fungují správně metody
 `toString()` u všech tříd a že počítač jde zapnout, jen pokud je správně sestavený.
 
 💡 Poznámka: Číslo, které končí na `L` znamená, že jde o číslo typu `long` a nikoliv `int`. Rozdíl je v rozsahu. `int` pojme čísla od `-2 147 483 648` do
@@ -107,7 +107,7 @@ public static void main(String... args) {
 }
 ```
 
-Nezapomeňte, že je úkolem vytvořit **model svého počítače**. Parametry vašeho počítače budou pravděpodobně **jiné** než Filipova počítače.
+Nezapomeňte, že je úkolem vytvořit **cz.czechitas.ukol3.model svého počítače**. Parametry vašeho počítače budou pravděpodobně **jiné** než Filipova počítače.
 
 ### Část 2
 

@@ -1,5 +1,9 @@
 package cz.czechitas.ukol3;
 
+import cz.czechitas.ukol3.model.Pocitac;
+import cz.czechitas.ukol3.model.Disk;
+import cz.czechitas.ukol3.model.Pamet;
+import cz.czechitas.ukol3.model.Procesor;
 
 /**
  * Spouštěcí třída celého programu
@@ -22,16 +26,11 @@ public class HlavniProgram {
         tanaDisk.setKapacita(485_015_932_928L);
         tanaDisk.setVyuziteMisto(212_495_249_408L);
 
-        DalsiDisk tanaNextDisk = new DalsiDisk();
-        tanaNextDisk.setKapacita(485_015_932_928L);
-        tanaNextDisk.setVyuziteMisto(310_345_129_506L);
+        tanaPocitac.setProcesor(tanaProcesor);
+        tanaPocitac.setPamet(tanaPamet);
+        tanaPocitac.setDisk(tanaDisk);
 
-        tanaPocitac.setCpu(tanaProcesor);
-        tanaPocitac.setRam(tanaPamet);
-        tanaPocitac.setPevnyDisk(tanaDisk);
-        tanaPocitac.setDruhyDisk(tanaNextDisk);
-
-        System.out.println(tanaPocitac); // Vypise vse
+        System.out.println(tanaPocitac.toString()); // Vypise vse
 
         tanaPocitac.zapniSe();      // Vypise, ze pocitac je zapnuty
         tanaPocitac.zapniSe();      // Vypise chybu, protoze pocitac uz bezi
@@ -41,6 +40,8 @@ public class HlavniProgram {
         tanaPocitac.vypniSe();      // Nevypise chybu, ale nic neprovede,
         tanaPocitac.vypniSe();      // protoze pocitac je uz vypnuty
 
+        tanaPocitac.zapniSe();
+        tanaPocitac.jeZapnuty();
         tanaPocitac.vytvorSouborOVelikosti(120_000_000_545L);
         tanaPocitac.vymazSouboryOVelikosti(250_393_223_242L);
     }

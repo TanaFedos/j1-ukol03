@@ -1,11 +1,8 @@
-package cz.czechitas.ukol3;
-
-import java.util.Objects;
+package cz.czechitas.ukol3.model;
 
 public class Procesor {
 
     private String vyrobce;
-
     private long rychlost;
 
     public String getVyrobce() {
@@ -26,9 +23,6 @@ public class Procesor {
 
     @Override
     public String toString() {
-        return "Procesor{" +
-                "vyrobce='" + vyrobce + '\'' +
-                ", rychlost=" + rychlost +
-                '}';
+        return "Procesor: " + "vyrobce " + vyrobce + ", " + "rychlost " + rychlost + " Hz" + ";";
     }
 }
